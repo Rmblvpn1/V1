@@ -62,7 +62,7 @@ export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
 
-export Server_URL="raw.githubusercontent.com/RMBLsukarata/permission/main"
+export Server_URL="raw.githubusercontent.com/Rmblvpn1/permission/main"
 
 export Server_Port="443"
 
