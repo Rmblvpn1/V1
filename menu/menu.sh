@@ -230,7 +230,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/rmblvpn1/permission/main/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
@@ -281,7 +281,7 @@ case $opt in
 8) clear ; addhost ;;
 9) clear ; genssl ;;
 10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-6969) clear ; wget https://raw.githubusercontent.com/artanodrop/v4/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
+6969) clear ; wget https://raw.githubusercontent.com/rmblvpn1/v4/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
