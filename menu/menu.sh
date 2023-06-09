@@ -1,6 +1,6 @@
 #!/bin/bash
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Rmblvpn1/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/RMBLsukarata/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -18,7 +18,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Rmblvpn1/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/RMBLsukarata/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -35,7 +35,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Rmblvpn1/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/RMBLsukarata/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -53,7 +53,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Rmblvpn1/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/RMBLsukarata/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -230,23 +230,21 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/Rmblvpn1/permission/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/main/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "                         ${BIWhite}${UWhite}About${NC}"
-echo -e "                 ${BICyan}Base Script : ${BIPurple}@PREMIUM${NC}"
-echo -e "                 ${BICyan}Bot Dev     : ${BIPurple}@Rmblbot${NC}"
-echo -e "                 ${BICyan}Decodec     :${BIPurple} @RMBLVPN${NC}"
-echo -e "               ${BICyan}${On_IPurple} SCRIPT PREMIUM RMBL VPN ${NC}"
+echo -e "                 ${BICyan}Base Script : ${BIPurple}Horassss${NC}"
+echo -e "                 ${BICyan}Bot Dev     : ${BIPurple}@xolvadev${NC}"
+echo -e "                 ${BICyan}Decodec     :${BIPurple} @boootzzzz${NC}"
+echo -e "               ${BICyan}${On_IPurple} SCRIPT MULTI RMBL SUKARATA ${UWhite}${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan}                   ${BIWhite}${UWhite}Server Informations${NC}"
-echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
-echo -e "\e[33m Total Amount Of RAM  \e[0m:  $tram MB"
-echo -e "\e[33m System Uptime        \e[0m:  $uptime "
-echo -e "\e[33m Isp Name             \e[0m:  $ISP"
-echo -e "\e[33m Domain               \e[0m:  $domain"	
-echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"	
+echo -e "${BICyan} │                  ${BIWhite}${UWhite}Server Informations${NC}"
+echo -e "${BICyan} │"
+echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
+echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
@@ -283,7 +281,7 @@ case $opt in
 8) clear ; addhost ;;
 9) clear ; genssl ;;
 10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-6969) clear ; wget https://raw.githubusercontent.com/Rmblvpn1/v1/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
+6969) clear ; wget https://raw.githubusercontent.com/artanodrop/v4/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
